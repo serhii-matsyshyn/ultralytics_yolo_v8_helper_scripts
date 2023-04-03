@@ -21,7 +21,8 @@ Streaming to YouTube is done by rtmp with the use of ffmpeg.
 sudo python3 stream_live_youtube.py --model yolov8n.pt --url "rtmp://a.rtmp.youtube.com/live2" --key "xxxx-xxxx-xxxx-xxxx-xxxx" --width 640 --height 480
 ```
 
-In order to run in the background:
+In order to run in the background:  
+**Attention: run it with sudo, because nohup cannot run sudo process if you have no sudo access.**
 ```bash
 nohup sudo python3 stream_live_youtube.py --model yolov8n.pt --url "rtmp://a.rtmp.youtube.com/live2" --key "xxxx-xxxx-xxxx-xxxx-xxxx" --width 640 --height 480 >res.out 2>&1 &
 echo $! > stream_live_youtube_pid.txt
